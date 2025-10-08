@@ -9,8 +9,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: 'Uma nave espacial parte de sua base. O gráfico mostra a distância (y) da base em função do tempo de viagem (x).'
     },
     graphData: {
-      labels: [0, 1, 2],
-      data: [0, 20, 40],
+      labels: [0, 1, 2, 3, 4, 5],
+      data: [0, 20, 40, 60, 80, 100],
       xLabel: 'Tempo (horas)',
       yLabel: 'Distância (km)',
     },
@@ -30,8 +30,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: 'Uma sonda está a 50 unidades de um planeta. Ela começa seu movimento a 5 unidades de distância de um asteroide e viaja a 1.5 unidades/s. Qual função descreve sua distância (y) do asteroide em função do tempo (x)?'
     },
     graphData: {
-      labels: [0, 2, 4, 6],
-      data: [5, 8, 11, 14],
+      labels: [0, 1, 2, 3, 4, 5, 6],
+      data: [5, 6.5, 8, 9.5, 11, 12.5, 14],
       xLabel: 'Tempo (segundos)',
       yLabel: 'Distância (m)',
     },
@@ -51,8 +51,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
         [Theme.SPACE]: "O combustível de um foguete começa em 100%. A cada ano-luz (x) viajado, ele consome 5%. Qual função representa o combustível restante (y)?"
     },
     graphData: {
-        labels: [0, 5, 10, 20],
-        data: [100, 75, 50, 0],
+        labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        data: [100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50],
         xLabel: 'Distância / Tempo',
         yLabel: 'Recurso (%)',
     },
@@ -72,8 +72,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
         [Theme.SPACE]: "A energia de um escudo de uma nave é f(x) = 3x + 10, onde 'x' é a energia coletada. O que o número 10 ('b') simboliza?"
     },
      graphData: {
-        labels: [0, 1, 2, 3],
-        data: [10, 13, 16, 19],
+        labels: [0, 1, 2, 3, 4, 5],
+        data: [10, 13, 16, 19, 22, 25],
         xLabel: 'Ações (Cestas / Inimigos / Coletas)',
         yLabel: 'Pontuação / Energia',
     },
@@ -93,8 +93,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
         [Theme.SPACE]: "A distância até um planeta é f(x) = -2x + 8, onde 'x' é o tempo de viagem. O que o '-2' ('a') significa?"
     },
     graphData: {
-        labels: [0, 1, 2, 4],
-        data: [8, 6, 4, 0],
+        labels: [0, 1, 2, 3, 4],
+        data: [8, 6, 4, 2, 0],
         xLabel: 'Tempo / Ataques',
         yLabel: 'Altitude / Vida / Distância',
     },
@@ -114,8 +114,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
         [Theme.SPACE]: 'Um rover em Marte se move a uma velocidade constante. O gráfico mostra a distância percorrida. Qual a sua velocidade média em metros por segundo?'
     },
     graphData: {
-        labels: [0, 2, 4, 6],
-        data: [0, 10, 20, 30],
+        labels: [0, 1, 2, 3, 4, 5, 6],
+        data: [0, 5, 10, 15, 20, 25, 30],
         xLabel: 'Tempo (segundos)',
         yLabel: 'Distância (metros/pixels)',
     },
@@ -135,8 +135,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
         [Theme.SPACE]: "Uma nave de carga já tem 150 toneladas de minério. A cada asteroide 'x' minerado, ela coleta 10 toneladas. Qual função representa a carga total 'y'?"
     },
     graphData: {
-        labels: [0, 1, 2, 3],
-        data: [150, 160, 170, 180],
+        labels: [0, 1, 2, 3, 4, 5],
+        data: [150, 160, 170, 180, 190, 200],
         xLabel: 'Repetições / Itens / Asteroides',
         yLabel: 'Peso Total / Moedas / Carga',
     },
@@ -156,8 +156,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "Uma estação espacial está a 2000 km da Terra e viaja em direção a ela a 100 km/h. Qual função descreve a distância 'y' até a Terra após 'x' horas?"
     },
     graphData: {
-        labels: [0, 5, 10, 20],
-        data: [2000, 1500, 1000, 0],
+        labels: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+        data: [2000, 1800, 1600, 1400, 1200, 1000, 800, 600, 400, 200, 0],
         xLabel: 'Tempo (min/s/h)',
         yLabel: 'Distância Restante (m/pixels/km)',
     },
@@ -177,8 +177,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "A radiação em uma nebulosa começa em 5 unidades e aumenta 2 unidades a cada hora que a nave passa nela. Qual é a função do nível de radiação 'y' em relação ao tempo 'x'?"
     },
     graphData: {
-        labels: [0, 1, 2, 3],
-        data: [5, 7, 9, 11],
+        labels: [0, 1, 2, 3, 4, 5, 6],
+        data: [5, 7, 9, 11, 13, 15, 17],
         xLabel: 'Tempo (horas/minutos)',
         yLabel: 'Temperatura/Perigo/Radiação',
     },
@@ -198,8 +198,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "A energia coletada por um painel solar de um satélite aumenta linearmente. Ele começa com 500 unidades. Após 3 dias, tem 800. Qual a função que representa a energia 'y' em função do tempo 'x'?"
     },
     graphData: {
-        labels: [0, 1, 2, 3],
-        data: [500, 600, 700, 800],
+        labels: [0, 1, 2, 3, 4, 5],
+        data: [500, 600, 700, 800, 900, 1000],
         xLabel: 'Tempo (minutos/horas/dias)',
         yLabel: 'Pontuação / XP / Energia',
     },
@@ -219,8 +219,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "Nave A: distância f(x) = 15x. Nave B: distância f(x) = 12x + 30. O gráfico representa a Nave A. Qual afirmação é a mais correta?"
     },
     graphData: {
-      labels: [0, 1, 2, 3],
-      data: [0, 15, 30, 45],
+      labels: [0, 1, 2, 3, 4, 5],
+      data: [0, 15, 30, 45, 60, 75],
       xLabel: 'Tempo',
       yLabel: 'Distância / Score',
     },
@@ -240,8 +240,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "Uma sonda é lançada de uma nave-mãe a 20 km de um planeta e viaja a 8 km/segundo. Qual função descreve sua distância 'y' da nave-mãe após 'x' segundos?"
     },
     graphData: {
-        labels: [0, 1, 2, 3],
-        data: [20, 28, 36, 44],
+        labels: [0, 1, 2, 3, 4, 5],
+        data: [20, 28, 36, 44, 52, 60],
         xLabel: 'Tempo (segundos)',
         yLabel: 'Posição (jardas/pixels/km)',
     },
@@ -261,8 +261,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "A função f(x) = -10x + 100 representa o oxigênio de um tanque, onde 'x' é o número de horas. Em quantas horas o oxigênio chegará a zero?"
     },
     graphData: {
-        labels: [0, 2, 5, 10],
-        data: [100, 80, 50, 0],
+        labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0],
         xLabel: 'Round / Golpes / Horas',
         yLabel: 'Energia / Vida / Oxigênio (%)',
     },
@@ -282,8 +282,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "A integridade do casco de uma nave é 95%. A cada colisão com um asteroide ('x'), 1% é perdido. Qual função representa a integridade final 'y'?"
     },
     graphData: {
-        labels: [0, 1, 2, 5],
-        data: [9.5, 9.4, 9.3, 9.0],
+        labels: [0, 1, 2, 3, 4, 5],
+        data: [9.5, 9.4, 9.3, 9.2, 9.1, 9.0],
         xLabel: 'Número de Erros / Colisões',
         yLabel: 'Nota / Pontos / Integridade',
     },
@@ -303,8 +303,8 @@ export const EXERCISE_QUESTIONS: Question[] = [
       [Theme.SPACE]: "Uma nave coleta 50 unidades de energia por hora. Ela começa com 200. Depois de quantas horas 'x' ela terá 500 unidades?"
     },
     graphData: {
-        labels: [0, 2, 4, 6],
-        data: [200, 300, 400, 500],
+        labels: [0, 1, 2, 3, 4, 5, 6],
+        data: [200, 250, 300, 350, 400, 450, 500],
         xLabel: 'Tempo (minutos/horas)',
         yLabel: 'Altitude / XP / Energia',
     },
@@ -332,8 +332,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "**Diminui**, porque o coeficiente de 't' (-10) é negativo. É o consumo de combustível ao longo do tempo."
         },
         graphData: {
-          labels: [0, 5, 10],
-          data: [100, 50, 0],
+          labels: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+          data: [100, 90, 80, 70, 60, 50, 40, 30, 20, 10, 0],
           xLabel: 'Tempo / Ataques',
           yLabel: 'Energia / Vida / Combustível'
         }
@@ -351,8 +351,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "A **distância inicial** ('b'). A nave já estava a 20km de distância quando começou a medir o tempo."
         },
         graphData: {
-            labels: [0, 2, 4, 6],
-            data: [20, 30, 40, 50],
+            labels: [0, 1, 2, 3, 4, 5, 6],
+            data: [20, 25, 30, 35, 40, 45, 50],
             xLabel: 'Tempo / Itens',
             yLabel: 'Distância / Pontuação'
         }
@@ -383,8 +383,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "`D(t) = 12t`. Posição inicial 'b' é 0, velocidade 'a' é 12."
         },
         graphData: {
-            labels: [0, 1, 2, 3],
-            data: [0, 12, 24, 36],
+            labels: [0, 1, 2, 3, 4, 5],
+            data: [0, 12, 24, 36, 48, 60],
             xLabel: 'Tempo',
             yLabel: 'Distância / Pontuação'
         }
@@ -402,8 +402,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "**Nave A** é mais veloz. Sua velocidade ('a') é 15, maior que a de B (12). B apenas começou mais longe."
         },
          graphData: {
-            labels: [0, 1, 2, 3],
-            data: [0, 15, 30, 45],
+            labels: [0, 1, 2, 3, 4, 5],
+            data: [0, 15, 30, 45, 60, 75],
             xLabel: 'Tempo',
             yLabel: 'Distância / Pontuação'
         }
@@ -421,8 +421,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "A função vira `Dist = b`. A nave está parada na posição 'b', flutuando no espaço."
         },
         graphData: {
-            labels: [0, 5, 10, 15],
-            data: [10, 10, 10, 10],
+            labels: [0, 1, 2, 3, 4, 5],
+            data: [10, 10, 10, 10, 10, 10],
             xLabel: 'Tempo',
             yLabel: 'Posição / Score (f(x) = 10)'
         }
@@ -440,8 +440,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "Velocidade ('a') = (variação distância) / (variação tempo). `a = (20 - 10) / (4 - 2) = 10 / 2 = 5 km/h`."
         },
         graphData: {
-            labels: [0, 2, 4, 6],
-            data: [0, 10, 20, 30],
+            labels: [0, 1, 2, 3, 4, 5, 6],
+            data: [0, 5, 10, 15, 20, 25, 30],
             xLabel: 'Tempo (s/min/h)',
             yLabel: 'Posição / Moedas'
         }
@@ -459,8 +459,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "Que **após 3 horas (t=3)**, a nave terá **25 unidades de energia (E(t)=25)**."
         },
          graphData: {
-            labels: [0, 1, 2, 3],
-            data: [10, 15, 20, 25],
+            labels: [0, 1, 2, 3, 4, 5],
+            data: [10, 15, 20, 25, 30, 35],
             xLabel: 'Tempo',
             yLabel: 'Posição / Pontos / Energia'
         }
@@ -478,8 +478,8 @@ export const FLASHCARDS_DATA: Flashcard[] = [
             [Theme.SPACE]: "A **velocidade** ('a') é a mesma (2). Elas viajam à mesma velocidade, mas a Nave 2 começou mais longe. Suas trajetórias são paralelas."
         },
         graphData: {
-            labels: [0, 2, 4, 6],
-            data: [5, 9, 13, 17],
+            labels: [0, 1, 2, 3, 4, 5, 6],
+            data: [5, 7, 9, 11, 13, 15, 17],
             xLabel: 'Tempo',
             yLabel: 'Posição (para y = 2x + 5)'
         }
