@@ -1,14 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { EXERCISE_QUESTIONS } from '../constants';
-import { Question } from '../types';
+import { Question, Theme } from '../types';
 import StyledBox from './StyledBox';
 import InteractiveChart from './InteractiveChart';
 
 interface ExerciseSectionProps {
   onBack: () => void;
+  theme: Theme;
 }
 
-const ExerciseSection: React.FC<ExerciseSectionProps> = ({ onBack }) => {
+const ExerciseSection: React.FC<ExerciseSectionProps> = ({ onBack, theme }) => {
   const [numQuestions, setNumQuestions] = useState<number | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -37,7 +38,7 @@ const ExerciseSection: React.FC<ExerciseSectionProps> = ({ onBack }) => {
       setFeedback('🏆 Resposta correta!');
       setCorrectAnswers(prev => prev + 1);
     } else {
-      setFeedback(`💡 Resposta incorreta. ${currentQuestion.feedback}`);
+      setFeedback(`💡 Resposta incorreta. ${currentQuestion.feedback[theme]}`);
     }
   };
 
@@ -98,7 +99,7 @@ const ExerciseSection: React.FC<ExerciseSectionProps> = ({ onBack }) => {
   return (
     <div className="animate-fade-in">
       <StyledBox title={`🎯 QUESTÃO ${currentQuestionIndex + 1} de ${numQuestions}`}>
-        <p className="text-lg mb-4 whitespace-pre-wrap">{currentQuestion.text}</p>
+        <p className="text-lg mb-4 whitespace-pre-wrap">{currentQuestion.text[theme]}</p>
         {currentQuestion.graphData && (
           <InteractiveChart data={currentQuestion.graphData} />
         )}

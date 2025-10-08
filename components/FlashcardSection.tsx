@@ -1,13 +1,15 @@
-
 import React, { useState } from 'react';
 import { FLASHCARDS_DATA } from '../constants';
 import StyledBox from './StyledBox';
+import InteractiveChart from './InteractiveChart';
+import { Theme } from '../types';
 
 interface FlashcardSectionProps {
   onBack: () => void;
+  theme: Theme;
 }
 
-const FlashcardSection: React.FC<FlashcardSectionProps> = ({ onBack }) => {
+const FlashcardSection: React.FC<FlashcardSectionProps> = ({ onBack, theme }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -28,21 +30,22 @@ const FlashcardSection: React.FC<FlashcardSectionProps> = ({ onBack }) => {
       <StyledBox title="🃏 TREINO RÁPIDO">
         <p className="mb-6 text-lg">Vamos para um treino rápido de reflexos mentais.</p>
 
-        <div className="relative h-64 w-full [transform-style:preserve-3d] transition-transform duration-500" style={{ transform: isFlipped ? 'rotateY(180deg)' : '' }}>
+        <div className="relative h-[30rem] w-full [transform-style:preserve-3d] transition-transform duration-500" style={{ transform: isFlipped ? 'rotateY(180deg)' : '' }}>
             {/* Front of the card */}
             <div className="absolute w-full h-full bg-slate-700 rounded-lg p-6 flex flex-col justify-center items-center [backface-visibility:hidden]">
               <div className="w-full text-center">
                   <p className="text-sm text-cyan-400 mb-2">{`FRENTE DO CARTÃO ${currentIndex + 1}/${FLASHCARDS_DATA.length}`}</p>
-                  <p className="text-2xl font-semibold">{card.front}</p>
+                  <p className="text-2xl font-semibold">{card.front[theme]}</p>
               </div>
             </div>
 
             {/* Back of the card */}
-            <div className="absolute w-full h-full bg-cyan-800 rounded-lg p-6 flex flex-col justify-center items-center [backface-visibility:hidden] [transform:rotateY(180deg)]">
+            <div className="absolute w-full h-full bg-cyan-800 rounded-lg p-6 flex flex-col justify-center items-center [backface-visibility:hidden] [transform:rotateY(180deg)] overflow-y-auto">
               <div className="w-full text-center">
                   <p className="text-sm text-slate-300 mb-2">{`💡 VERSO DO CARTÃO ${currentIndex + 1}/${FLASHCARDS_DATA.length}`}</p>
-                  <p className="text-xl" dangerouslySetInnerHTML={{ __html: card.back }}></p>
+                  <p className="text-xl" dangerouslySetInnerHTML={{ __html: card.back[theme] }}></p>
               </div>
+              {card.graphData && <InteractiveChart data={card.graphData} />}
             </div>
         </div>
         

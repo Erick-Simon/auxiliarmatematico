@@ -5,9 +5,15 @@ export enum Screen {
   FLASHCARDS,
 }
 
+export enum Theme {
+  SPORTS = 'SPORTS',
+  GAMES = 'GAMES',
+  SPACE = 'SPACE',
+}
+
 export interface Question {
   id: number;
-  text: string;
+  text: Record<Theme, string>;
   graphData?: {
     labels: (string | number)[];
     data: number[];
@@ -16,11 +22,17 @@ export interface Question {
   };
   options: string[];
   correctAnswerIndex: number;
-  feedback: string;
+  feedback: Record<Theme, string>;
 }
 
 export interface Flashcard {
   id: number;
-  front: string;
-  back: string;
+  front: Record<Theme, string>;
+  back: Record<Theme, string>;
+  graphData?: {
+    labels: (string | number)[];
+    data: number[];
+    xLabel: string;
+    yLabel: string;
+  };
 }

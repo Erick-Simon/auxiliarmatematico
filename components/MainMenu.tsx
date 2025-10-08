@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Screen } from '../types';
 import StyledBox from './StyledBox';
 
 interface MainMenuProps {
   setScreen: (screen: Screen) => void;
+  onThemeChange: () => void;
 }
 
 const MenuItem: React.FC<{ onClick: () => void; children: React.ReactNode }> = ({ onClick, children }) => (
@@ -16,7 +16,7 @@ const MenuItem: React.FC<{ onClick: () => void; children: React.ReactNode }> = (
     </button>
 );
 
-const MainMenu: React.FC<MainMenuProps> = ({ setScreen }) => {
+const MainMenu: React.FC<MainMenuProps> = ({ setScreen, onThemeChange }) => {
   return (
     <div className="text-center animate-fade-in">
       <h1 className="text-4xl font-bold mb-4 text-cyan-300">Tutor Matemático Zen 🧘‍♂️</h1>
@@ -34,6 +34,16 @@ const MainMenu: React.FC<MainMenuProps> = ({ setScreen }) => {
             <MenuItem onClick={() => setScreen(Screen.FLASHCARDS)}>
                 🃏  Treino Rápido (Flashcards)
             </MenuItem>
+        </div>
+        <div className="mt-6 border-t border-slate-600 pt-4">
+          <button
+            onClick={onThemeChange}
+            className="w-full text-center p-3 bg-slate-800 hover:bg-indigo-700/60 rounded-lg transition-colors duration-300 text-slate-400 hover:text-cyan-300 text-base"
+            aria-label="Trocar de tema"
+            title="Voltar para a tela de seleção de tema"
+          >
+            🎨 Trocar Tema
+          </button>
         </div>
       </StyledBox>
     </div>
